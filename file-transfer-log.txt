@@ -1,0 +1,30 @@
+
+1. Copied test-file.txt from my computer to the instance:
+   - Created the file locally:
+     echo "Hello from my computer!" > test-file.txt
+   - Sent the file to the instance:
+     scp test-file.txt bootcamp-web:~/
+   - Verified on the instance:
+     ssh bootcamp-web "cat ~/test-file.txt"
+     Output: Hello from my computer!
+
+2. Created instance-info.txt on the instance and copied it back to my computer:
+   - Created the file on the instance:
+     ssh bootcamp-web "echo 'Instance info file' > ~/instance-info.txt"
+   - Copied the file to my local machine:
+     scp bootcamp-web:~/instance-info.txt ./downloaded-info.txt
+   - Verified locally:
+     cat downloaded-info.txt
+     Output: Instance info file
+
+3. Created a directory with a small website locally:
+   - mkdir my-website
+   - echo "<h1>My Site</h1>" > my-website/index.html
+   - echo "body { background: lightblue; }" > my-website/style.css
+   - Note: The directory already existed, so mkdir gave a warning, but files were created successfully.
+
+4. Copied the directory to the instance:
+   - scp -r my-website bootcamp-web:~/
+   - Verified on the instance:
+     ssh bootcamp-web "ls -la ~/my-website/"
+     Output shows index.html and style.css files present.
