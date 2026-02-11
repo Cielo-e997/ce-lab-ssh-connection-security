@@ -1,0 +1,15 @@
+Test 1: SSH from allowed IP
+Result: ✅ Connection successful
+Observed: Able to login to instance using alias 'bootcamp-web'
+
+Test 2: HTTP access from anywhere
+Result: ✅ Returns HTTP 200 OK
+Observed: curl -I http://35.158.103.164 returned HTTP/1.1 200 OK
+
+Test 3: Unsupported Protocol (ICMP - ping)
+Result: ❌ Request timed out (blocked as expected)
+Observed: ping 35.158.103.164 did not respond
+
+Test 4: Blocked Port (MySQL 3306)
+Result: ❌ Connection refused / timeout (blocked as expected)
+Observed: telnet/nc to port 3306 did not connect
