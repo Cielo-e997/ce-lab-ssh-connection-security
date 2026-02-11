@@ -1,0 +1,15 @@
+PasswordAuthentication:
+- Value found: no
+- Password-based login is disabled.
+- Only SSH key authentication is allowed.
+
+PermitRootLogin:
+- No explicit value found in sshd_config.
+- Root login is disabled by default on Amazon Linux and EC2.
+
+PubkeyAuthentication:
+- No explicit value found in sshd_config.
+- SSH key authentication is enabled by default.
+- Verified by successful key-based SSH connection.
+
+No changes were made to the SSH configuration as instructed by the lab.
