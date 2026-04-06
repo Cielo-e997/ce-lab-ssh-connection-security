@@ -1,0 +1,9 @@
+Host bootcamp-web
+    HostName YOUR_PUBLIC_IP
+    User ec2-user
+    IdentityFile ~/.ssh/bootcamp-week2-key.pem
+    ServerAliveInterval 60
+    ServerAliveCountMax 3
+    TCPKeepAlive yes
+    Compression yes
+
